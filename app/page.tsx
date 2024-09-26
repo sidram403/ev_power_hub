@@ -18,6 +18,25 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 
+
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface BenefitCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
 export default function LandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,22 +44,22 @@ export default function LandingPage() {
     {
       title: "Solar-Powered Charging Station",
       description: "Eco-friendly charging solution for Taluk A",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/assets/solarcharging.jpeg",
     },
     {
       title: "Mobile Charging Unit",
       description: "Flexible charging options for Taluk B",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/P",
     },
     {
-      title: "Fast Charging Hub",
-      description: "Rapid charging facility for Taluk C",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "Bike Charging Station",
+      description: "Charge your two-wheeler bike",
+      image: "/assets/twowheeler.jpg",
     },
     {
-      title: "Grid-Independent Station",
-      description: "Reliable charging for remote Taluk D",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "Portable Charging ",
+      description: "Book from anywhere and charge vehicle",
+      image: "/assets/poratablecharger.jpg",
     },
   ];
 
@@ -436,7 +455,7 @@ export default function LandingPage() {
   );
 }
 
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <Card>
       <CardHeader>
@@ -454,7 +473,7 @@ function FeatureCard({ icon, title, description }) {
   );
 }
 
-function BenefitCard({ icon, title, description }) {
+function BenefitCard({ icon, title, description }: BenefitCardProps) {
   return (
     <Card>
       <CardContent className="flex flex-col items-center p-6 text-center">
@@ -468,7 +487,7 @@ function BenefitCard({ icon, title, description }) {
   );
 }
 
-function ServiceCard({ title, description, image }) {
+function ServiceCard({ title, description, image }: ServiceCardProps) {
   return (
     <Card className="overflow-hidden">
       <div className="relative h-48">
