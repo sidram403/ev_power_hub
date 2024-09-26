@@ -94,7 +94,7 @@ export default function LandingPage() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Benefits
+                Benefits 
               </Button>
               <Button variant="outline">Contact Us</Button>
             </div>
@@ -111,58 +111,59 @@ export default function LandingPage() {
           </nav>
           {isMenuOpen && (
             <div className="mt-4 space-y-2 md:hidden">
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-                onClick={() => {
-                  document
-                    .getElementById("features")
-                    .scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Features
-              </Button>
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-                onClick={() => {
-                  document
-                    .getElementById("services")
-                    .scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Services
-              </Button>
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-                onClick={() => {
-                  document
-                    .getElementById("app")
-                    .scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                App
-              </Button>
-              <Button
-                variant="ghost"
-                className="w-full justify-start"
-                onClick={() => {
-                  document
-                    .getElementById("benefits")
-                    .scrollIntoView({ behavior: "smooth" });
-                  setIsMenuOpen(false);
-                }}
-              >
-                Benefits
-              </Button>
-              <Button variant="outline" className="w-full justify-start">
-                Contact Us
-              </Button>
-            </div>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={() => {
+                document
+                  .getElementById("features")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              Features
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={() => {
+                document
+                  .getElementById("services")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              Services
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={() => {
+                document
+                  .getElementById("app")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              App
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full justify-start"
+              onClick={() => {
+                document
+                  .getElementById("benefits")
+                  ?.scrollIntoView({ behavior: "smooth" });
+                setIsMenuOpen(false);
+              }}
+            >
+              Benefits
+            </Button>
+            <Button variant="outline" className="w-full justify-start">
+              Contact Us
+            </Button>
+          </div>
+          
           )}
         </div>
       </header>
